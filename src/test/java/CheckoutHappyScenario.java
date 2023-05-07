@@ -30,7 +30,7 @@ public class CheckoutHappyScenario {
         driver.findElement(By.cssSelector("input[data-test='continue']")).click();
         //Assertion values must be checked against excel or json file not hard coded
         Assert.assertEquals(driver.findElement(By.cssSelector("div[class='summary_info_label summary_total_label']")).getText(),"Total: $32.39");
-        driver.findElement(By.cssSelector("input[data-test='finish']")).click();
+        driver.findElement(By.cssSelector("button[data-test='finish']")).click();
         //Assertion values must be checked against excel or json file not hard coded
         Assert.assertEquals(driver.findElement(By.cssSelector("h2.complete-header")).getText(), "Thank you for your order!");
         Assert.assertEquals(driver.findElement(By.cssSelector("div.complete-text")).getText(),"Your order has been dispatched, and will arrive just as fast as the pony can get there!");
